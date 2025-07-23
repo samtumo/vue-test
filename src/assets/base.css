@@ -83,4 +83,10 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} 
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+
 }
