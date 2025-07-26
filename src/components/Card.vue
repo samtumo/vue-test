@@ -1,11 +1,13 @@
 <template>
   <div class="Card">
+    <button class="close" @click.stop="$emit('delete')">
+   <i class="fa-solid fa-square-xmark"></i>
+    </button>
     <h2>{{ props.title }}</h2>
     <p class="Text">
   {{ props.content }}
     </p>
-    <p class="date"></p>
-    {{ props.date }}
+    <p class="date">{{ props.date }}</p>
   </div>
   </template>
 
@@ -26,6 +28,7 @@ border-radius: 10px;
 padding: 20px;
 width: 320px;
 height: 208px;
+position: relative;
 }
 .Text {
 display: -webkit-box;
@@ -38,5 +41,20 @@ height: 87px;
   text-align: right;
   margin-top: 10px;
 }
+.close {
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0;
+  transition: 250ms;
+}
+.Card:hover .close {
+  opacity: 1;
+}
+
 
 </style>  
